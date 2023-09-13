@@ -26,7 +26,7 @@ return true;
   }
 else
   {
-    getElement("#tbTen").innerHTML= 'Tài khoản gồm 4-6 chữ số từ 0-9';
+    getElement("#tbTen").innerHTML= 'Tên là tiếng việt có dấu "Nguyễn Văn A"';
 return false;
   }
 }
@@ -42,7 +42,7 @@ return true;
   }
 else
   {
-    getElement("#tbEmail").innerHTML= 'Tài khoản gồm 4-6 chữ số từ 0-9';
+    getElement("#tbEmail").innerHTML= 'Vui lòng nhập đúng định dạng email "nguyenva@email.com.vn"';
 return false;
   }
 }
@@ -58,7 +58,7 @@ return true;
   }
 else
   {
-    getElement("#tbNgay").innerHTML= 'Tài khoản gồm 4-6 chữ số từ 0-9';
+    getElement("#tbNgay").innerHTML= 'Vui lòng nhập ngày làm việc';
 return false;
   }
 }
@@ -66,7 +66,7 @@ return false;
 function validatePass()
 {
 var inputValue = document.getElementById("password").value;
-var regexPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+var regexPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,6}$/;
 if(regexPattern.test(inputValue))
   {
     getElement("#tbMatKhau").innerHTML= '';
@@ -74,7 +74,7 @@ return true;
   }
 else
   {
-    getElement("#tbMatKhau").innerHTML= 'Tài khoản gồm 4-6 chữ số từ 0-9';
+    getElement("#tbMatKhau").innerHTML= 'Mật khẩu gồm 4-6 ký tự. bao gồm ít nhất 1 chữ hoa, 1 chữ số';
 return false;
   }
 }
@@ -89,7 +89,7 @@ return true;
   }
 else
   {
-    getElement("#tbLuongCB").innerHTML= 'Tài khoản gồm 4-6 chữ số từ 0-9';
+    getElement("#tbLuongCB").innerHTML= 'Nhập mức lương từ 1.000.000 - 20.000.000';
 return false;
   }
 }
@@ -104,7 +104,7 @@ return true;
   }
 else
   {
-    getElement("#tbGiolam").innerHTML= 'Tài khoản gồm 4-6 chữ số từ 0-9';
+    getElement("#tbGiolam").innerHTML= 'Nhập số giờ làm từ 80 - 200 giờ / tháng';
 return false;
   }
 }
@@ -122,7 +122,7 @@ return true;
   }
 else
   {
-    getElement("#tbChucVu").innerHTML= 'Tài khoản gồm 4-6 chữ số từ 0-9';
+    getElement("#tbChucVu").innerHTML= 'Vui lòng chọn chức vụ : sếp, trưởng phòng, nhân viên';
 return false;
   }
 }
