@@ -8,23 +8,7 @@ function getElement(selector) {
 // ------------------------
 // thêm nhân viên mới
 function themNhanVien() {
-    validateLuongCoBan();
-    validateUserName();
-    validateName();
-    validateEmail();
-    validatePass();
-    validateGioLam();
-    validateChucVu();
-    validateChucVu();
-    validateMDY();
-    if(validateLuongCoBan() == true
-        && validateUserName() == true
-        && validateName() == true    
-        && validateEmail() == true    
-        && validatePass() == true
-        && validateGioLam() == true   
-        && validateChucVu() == true
-        && validateMDY() == true 
+    if(valiatetion1() == true
     ){
     var taiKhoan = +getElement("#tknv").value;
     var hoVaTen = getElement("#name").value;
@@ -109,26 +93,10 @@ function xoaNV(taiKhoan){
 
 // lấy thông tin nhân viên
 function layThongTinNhanVien(){
-    validateLuongCoBan();
-    validateUserName();
-    validateName();
-    validateEmail();
-    validatePass();
-    validateGioLam();
-    validateChucVu();
-    validateChucVu();
-    validateMDY();
-    if(validateLuongCoBan() == true
-        && validateUserName() == true
-        && validateName() == true    
-        && validateEmail() == true    
-        && validatePass() == true
-        && validateGioLam() == true   
-        && validateChucVu() == true
-        && validateMDY() == true 
-    ){
+    if(valiatetion1() == true)
+    {
     var nvSearch = +getElement("#tknv").value;
-    var index = -1;
+
     for(var i = 0; i < tepNV.length; i++){
         var nvInfor = tepNV[i];
         if(nvSearch == nvInfor.taiKhoan){
@@ -171,16 +139,13 @@ function layThongTinNhanVien(){
                 </tr>
                 `
             };
+            alert("Thay đổi thông tin thành công")
             getElement("#tableDanhSach").innerHTML = HTMLstring;
             break;
     }    
     }
-    if(index !== -1)
-    {
-        alert("nhân viên không tồn tại")
-    }
-}
-}
+};
+};
 
 // tìm nhân viên
 function timLoaiNV(){
